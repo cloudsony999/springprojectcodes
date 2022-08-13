@@ -27,7 +27,7 @@ import io.swagger.annotations.ApiResponses;
 @RestController(value = "/secure")
 @RequestMapping("/secure")
 @Api(tags = "Clients")
-@ApiOperation(value = "View a list of available employees", response = List.class)
+@ApiOperation(value = "View a full list of available employees", response = List.class)
 
 @ApiResponses(value = { @ApiResponse(code = 200, message = "Successfully retrieved list"),
 		@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -80,6 +80,6 @@ public class EmployeeController {
 
 	@GetMapping(value = "/getmessage")
 	public String getTestData() {
-		return "I am test data";
+		return "I am test related data";
 	}
 }
